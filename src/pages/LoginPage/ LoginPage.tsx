@@ -4,19 +4,34 @@ import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 
 export const LoginPage: React.FC = () => {
-  const [username, setUsername] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (username === "odil@gmail.com" && password === "12345678") {
+
+    const userData = localStorage.getItem(email);
+    if (!userData) {
+      alert(
+        "Пользователь с таким email не найден. Пожалуйста, зарегистрируйтесь."
+      );
+      return;
+    }
+
+
+    const { password: storedPassword } = JSON.parse(userData);
+
+    if (storedPassword === password) {
+      // Сохраняем статус входа в localStorage
       localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("email", email); 
+
 
       navigate("/main");
     } else {
-      alert("Неверные данные");
+      alert("Неверный пароль.");
     }
   };
 
@@ -29,8 +44,8 @@ export const LoginPage: React.FC = () => {
             placeholder="Email"
             className="login-input"
             type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <br />

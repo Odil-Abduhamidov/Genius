@@ -11,10 +11,12 @@ export const RegistrationPage: React.FC = () => {
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
 
+
     if (password !== confirmPassword) {
       alert("Пароли не совпадают!");
       return;
     }
+
 
     const existingUser = localStorage.getItem(email);
     if (existingUser) {
@@ -22,7 +24,11 @@ export const RegistrationPage: React.FC = () => {
       return;
     }
 
+
     localStorage.setItem(email, JSON.stringify({ email, password }));
+    localStorage.setItem("isRegistered", "true"); 
+
+
     alert("Регистрация успешна!");
     navigate("/login");
   };
