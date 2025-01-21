@@ -1,9 +1,15 @@
+body {
+  background-image: url("../../../../space.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .registration-container {
-  display: flex;
+  display: inline-flex;
   height: 100vh;
-  align-items: center;
   justify-content: center;
-  background-color: #f3f4f6;
+  align-items: center;
 }
 
 .registration-box {

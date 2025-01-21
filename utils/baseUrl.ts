@@ -1,1 +1,2 @@
-export const baseUrl = "https://161.35.153.209:5430/api";
+export const baseUrl =
+  "https://genius-song-lyrics1.p.rapidapi.com";
