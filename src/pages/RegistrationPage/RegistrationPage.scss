@@ -1,11 +1,12 @@
-/* LoginPage.scss */
-.LoginPage {
+/* RegistrationPage.scss */
+.RegistrationPage {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Градиент для фона */
+  background: linear-gradient(135deg, #8e44ad, #3498db);
   font-family: 'Arial', sans-serif;
+  padding: 20px;
 }
 
 form {
@@ -13,8 +14,8 @@ form {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
   width: 100%;
-  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -22,24 +23,25 @@ form {
 
 form h1 {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #333;
   margin-bottom: 10px;
 }
 
 input {
+  width: 100%;
   padding: 15px;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  width: 100%;
   outline: none;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 input:focus {
-  border-color: #ff7e5f;
-  box-shadow: 0 0 10px rgba(255, 126, 95, 0.3);
+  border-color: #8e44ad;
+  box-shadow: 0 0 10px rgba(142, 68, 173, 0.3);
 }
 
 input.error {
@@ -56,46 +58,28 @@ input::placeholder {
   margin-top: -10px;
 }
 
-button {
+.submit-button {
   padding: 15px;
-  font-size: 1rem;
-  background-color: #ff7e5f;
+  font-size: 1.1rem;
+  background-color: #8e44ad;
   color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  box-shadow: 0 10px 20px rgba(255, 126, 95, 0.2);
+  box-shadow: 0 10px 20px rgba(142, 68, 173, 0.2);
 }
 
-button:hover {
-  background-color: #feb47b;
+.submit-button:hover {
+  background-color: #9b59b6;
 }
 
-button:active {
-  background-color: #ff6f58;
-}
-
-.auth-options {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.auth-options a {
-  text-decoration: none;
-  color: #ff7e5f;
-  font-weight: 600;
-  margin-left: 15px;
-  transition: color 0.3s ease;
-}
-
-.auth-options a:hover {
-  color: #feb47b;
+.submit-button:active {
+  background-color: #7d3c99;
 }
 
 @media (max-width: 480px) {
-  .LoginPage {
+  .RegistrationPage {
     padding: 20px;
   }
 
@@ -107,7 +91,7 @@ button:active {
     padding: 12px;
   }
 
-  button {
+  .submit-button {
     font-size: 1rem;
   }
 }

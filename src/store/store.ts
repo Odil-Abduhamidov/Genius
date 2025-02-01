@@ -1,16 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { GeniusApi } from "./api/genius.api";
-import { ExampleApi } from "./api/example.api";
+import { SongsApi } from "./api/songs.api";
 
 export const store = configureStore({
   reducer: {
-    [ExampleApi.reducerPath]: ExampleApi.reducer,
-    [GeniusApi.reducerPath]: GeniusApi.reducer,
+    [SongsApi.reducerPath]: SongsApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(GeniusApi.middleware),
+    getDefaultMiddleware().concat(SongsApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
-
 export type AppDispatch = typeof store.dispatch;

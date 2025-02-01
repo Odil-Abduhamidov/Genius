@@ -1,0 +1,104 @@
+/* Основной фон сайта - градиент ярких цветов */
+body {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+
+/* Контейнер */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  align-items: center;
+}
+
+/* Заголовок Genius */
+.geniusTitle {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+/* Заголовок Charts */
+.chartsTitle {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Контейнер списка */
+.songListContainer {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Список песен */
+.songList {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  border-radius: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.songList:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.02);
+}
+
+/* Номера песен */
+.songNumber {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FF4500;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Обложки */
+.songImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Детали песни */
+.songDetails {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Название песни */
+.songTitle {
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  color: #222;
+}
+
+/* Исполнитель */
+.songArtist {
+  color: #555;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
