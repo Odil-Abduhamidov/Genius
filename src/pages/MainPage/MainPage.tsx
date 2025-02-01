@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useGetAllSongsQuery } from "../../store/api/songs.api";
 
 const MainPage = () => {
